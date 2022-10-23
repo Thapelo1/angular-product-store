@@ -19,6 +19,13 @@ export class ProductsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  deleteProduct(product: Product){
+    let index = this.products.indexOf(product);
+    if (index !== -1) {
+      this.products.splice(index, 1);
+    }
+  }
+
 
 
 }
